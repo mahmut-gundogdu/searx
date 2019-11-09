@@ -27,9 +27,10 @@ from searx.plugins import (oa_doi_rewrite,
                            infinite_scroll,
                            open_results_on_new_tab,
                            self_info,
-                            only_show_green_results,
+                           only_show_green_results,
                            search_on_category_select,
                            tracker_url_remover,
+                           blocked_domains,
                            vim_hotkeys)
 
 required_attrs = (('name', (str, unicode)),
@@ -87,4 +88,5 @@ plugins.register(self_info)
 plugins.register(search_on_category_select)
 plugins.register(tracker_url_remover)
 plugins.register(vim_hotkeys)
-plugins.register(only_show_green_results)
+# plugins.register(only_show_green_results) ## Todo: 'blocked domains' conflicted with this plugin. fix it.
+plugins.register(blocked_domains)
